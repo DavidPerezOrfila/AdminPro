@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {
-  SettingsService,
-  SidebarService,
-  SharedService
-} from './service.index';
+// tslint:disable-next-line: no-submodule-imports
+import { HttpClientModule } from '@angular/common/http';
+
+import { SettingsService, SidebarService, SharedService, UsuarioService, LoginGuardGuard } from './service.index';
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, HttpClientModule],
   declarations: [],
-  providers: [SettingsService, SidebarService, SharedService]
+  providers: [SettingsService, SidebarService, SharedService, UsuarioService, LoginGuardGuard],
 })
 export class ServiceModule {}

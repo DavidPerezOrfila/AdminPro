@@ -1,6 +1,7 @@
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
 
 // Rutas
 import { APP_ROUTES } from './app.routes';
@@ -18,7 +19,7 @@ import { ServiceModule } from './services/service.module';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent],
-  imports: [BrowserModule, APP_ROUTES, PagesModule, FormsModule, ReactiveFormsModule, ServiceModule],
+  imports: [BrowserModule, APP_ROUTES, PagesModule, FormsModule, ReactiveFormsModule, ServiceModule, SweetAlert2Module.forRoot()],
   providers: [],
   bootstrap: [AppComponent]
 })
